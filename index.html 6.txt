@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>T&J Кафе</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(90deg, #004080, #ffcc00);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1511920170033-f8396924c348?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') no-repeat center center;
+      background-size: contain;
+      background-color: #000;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 2rem;
+    }
+    .content {
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .product, .shop, .contact-form {
+      background: #f9f9f9;
+      border-radius: 1rem;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    }
+    .product h3, .shop h3 {
+      color: #004080;
+    }
+    .shop-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+    }
+    .shop-item img {
+      max-width: 100px;
+      border-radius: 0.5rem;
+    }
+    .shop-item button {
+      background: #004080;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+    .cart {
+      border-top: 1px solid #ccc;
+      margin-top: 2rem;
+      padding-top: 1rem;
+    }
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+    }
+    .contact-form input,
+    .contact-form textarea,
+    select {
+      width: 100%;
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      color: #000;
+      background-color: #fff;
+    }
+    .contact-form button {
+      background: #ffcc00;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-weight: bold;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>T&J Кафе</h1>
+    <p>60% арабика, 40% робуста – нотки на шоколад, череша и печени бадеми</p>
+  </header>
+
+  <section class="hero">
+    <h2>Наслади се на изискано кафе с характер</h2>
+  </section>
+
+  <section class="content">
+    <div class="product">
+      <h3>За продукта</h3>
+      <p>T&J е изискана селекция от 60% арабика и 40% робуста – перфектно балансиран вкус със средно изпечени зърна и ароматни нотки на шоколад, череша и печени бадеми. Идеално за всяка част от деня.</p>
+    </div>
+
+    <div class="shop">
+      <h3>Магазин</h3>
+      <div class="shop-item">
+        <div>
+          <strong>Кафе T&J – 1 кг</strong><br>
+          <span>Цена: 25 лв</span>
+        </div>
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=120&q=80" alt="Кафе T&J">
+        <button onclick="addToCart('Кафе T&J – 1 кг', 25)">Добави</button>
+      </div>
+      <div class="shop-item">
+        <div>
+          <strong>Кафе T&J – 500 г</strong><br>
+          <span>Цена: 14 лв</span>
+        </div>
+        <img src="https://images.unsplash.com/photo-1536520002442-39764a41e30d?auto=format&fit=crop&w=120&q=80" alt="Кафе T&J 500g">
+        <button onclick="addToCart('Кафе T&J – 500 г', 14)">Добави</button>
+      </div>
+      <div class="shop-item">
+        <div>
+          <strong>T&J Medium Roast – 1 кг</strong><br>
+          <span>Цена: 28 лв</span>
+        </div>
+        <img src="https://sdmntprsouthcentralus.oaiusercontent.com/files/00000000-5ef0-61f7-8bcd-26aa6984f313/raw?se=2025-05-23T07%3A12%3A09Z&sp=r&sv=2024-08-04&sr=b&scid=fc19a8c7-55e6-5f89-8118-0c1fcfe0de50&skoid=0a4a0f0c-99ac-4752-9d87-cfac036fa93f&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-23T06%3A02%3A34Z&ske=2025-05-24T06%3A02%3A34Z&sks=b&skv=2024-08-04&sig=yXkoomn3WAC4kr%2BVd8KYJXzQ/DoN8alAqCSySlgRq%2Bo%3D" alt="T&J Medium Roast">
+        <button onclick="addToCart('T&J Medium Roast – 1 кг', 28)">Добави</button>
+      </div>
+
+      <div class="cart" id="cart">
+        <h3>Количка</h3>
+        <div id="cart-items"></div>
+        <p><strong>Общо:</strong> <span id="cart-total">0</span> лв</p>
+        <form id="checkoutForm">
+          <input type="text" name="name" placeholder="Име" required>
+          <input type="email" name="email" placeholder="Имейл" required>
+          <input type="text" name="phone" placeholder="Телефон" required>
+          <textarea name="address" placeholder="Адрес за доставка"></textarea>
+          <select name="payment" required>
+            <option value="">Избери начин на плащане</option>
+            <option value="cod">Наложен платеж</option>
+            <option value="card">Кредитна/Дебитна карта</option>
+          </select>
+          <button type="submit">Поръчай</button>
+        </form>
+        <p id="checkoutMessage"></p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const cartItems = document.getElementById('cart-items');
+    const cartTotal = document.getElementById('cart-total');
+    let cart = [];
+
+    function addToCart(product, price) {
+      cart.push({ product, price });
+      renderCart();
+    }
+
+    function renderCart() {
+      cartItems.innerHTML = '';
+      let total = 0;
+      cart.forEach((item, index) => {
+        total += item.price;
+        const div = document.createElement('div');
+        div.className = 'cart-item';
+        div.innerHTML = `${item.product} - ${item.price} лв <button onclick="removeItem(${index})">✖</button>`;
+        cartItems.appendChild(div);
+      });
+      cartTotal.innerText = total;
+    }
+
+    function removeItem(index) {
+      cart.splice(index, 1);
+      renderCart();
+    }
+
+    document.getElementById('checkoutForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      if (cart.length === 0) {
+        document.getElementById('checkoutMessage').innerText = 'Количката е празна.';
+        return;
+      }
+
+      const formData = new FormData(this);
+      formData.append('cart', JSON.stringify(cart));
+
+      fetch('https://formspree.io/f/mrbqvzzg', {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(response => {
+        if (response.ok) {
+          document.getElementById('checkoutMessage').innerText = 'Поръчката е изпратена успешно!';
+          cart = [];
+          renderCart();
+          this.reset();
+        } else {
+          document.getElementById('checkoutMessage').innerText = 'Грешка при изпращане. Опитайте отново.';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
